@@ -1,0 +1,13 @@
+version: '3'
+services:
+    discord_bot_template:
+        container_name: discord_bot_template
+        hostname: discord_bot_template
+        build: .
+        working_dir: /root
+        environment:
+          TZ: Asia/Tokyo
+        volumes:
+          - ./src:/root/src
+          - ./logs:/root/logs
+        entrypoint: python ./src/main.py
