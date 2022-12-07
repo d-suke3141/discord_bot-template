@@ -1,6 +1,7 @@
-from discord.ext.commands import Cog
-from discord.commands import SlashCommandGroup
 import discord
+from discord.commands import SlashCommandGroup
+from discord.ext.commands import Cog
+
 
 class Develop(Cog, name='develop'):
     group = SlashCommandGroup('develop', 'Here are the commands related to develop.')

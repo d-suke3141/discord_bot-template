@@ -1,5 +1,12 @@
+import os
+
 from discord.ext import commands
-from secret import bot_token, guild_ids
+from dotenv import load_dotenv
+
+load_dotenv()
+
+bot_token = os.environ.get("BOT_TOKEN")
+guild_ids = os.environ.get("GUILD_IDS").split(',')
 
 INITIAL_EXTENSIONS = [
     'cogs.general',

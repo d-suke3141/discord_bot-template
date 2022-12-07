@@ -6,7 +6,6 @@
             "format": "[%(asctime)s]: %(filename)s:%(lineno)d %(funcName)s [%(levelname)s]: %(message)s"
         }
     },
-
     "handlers": {
         "console": {
             "class": "logging.StreamHandler",
@@ -27,10 +26,13 @@
             "filename": "./logs/guess_picrew_bot_info.log"
         }
     },
-
     "root": {
         "level": "INFO",
-        "handlers": ["console", "error", "info"],
+        "handlers": [
+            "console",
+            "error",
+            "info"
+        ],
         "propagate": false
     }
 }

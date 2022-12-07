@@ -1,6 +1,7 @@
-from discord.ext.commands import Cog
-from discord.commands import slash_command
 import discord
+from discord.commands import slash_command
+from discord.ext.commands import Cog
+
 
 class General(Cog, name='general'):
     def __init__(self, bot: discord.Bot):

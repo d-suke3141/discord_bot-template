@@ -1,6 +1,6 @@
-from discord.ext.commands import Cog
-from discord.commands import slash_command
 import discord
+from discord.commands import slash_command
+from discord.ext.commands import Cog
 
 
 class Template(Cog, name='template'):
@@ -23,6 +23,12 @@ class Template(Cog, name='template'):
         """
         await ctx.respond('This is command1.')
 
+    @Cog.listener(name='on_message')
+    async def on_message(self, message: discord.Message):
+        if message.author.bot:
+            return
+        if self.bot.user in message.mentions:
+            await message.add_reaction('\U0001f44d')
 
 def setup(bot):
     bot.add_cog(Template(bot))
