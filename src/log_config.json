@@ -17,13 +17,13 @@
             "class": "logging.FileHandler",
             "level": "ERROR",
             "formatter": "simple",
-            "filename": "./logs/guess_picrew_bot.log"
+            "filename": "./logs/discord_bot_error.log"
         },
         "info": {
             "class": "logging.FileHandler",
             "level": "INFO",
             "formatter": "simple",
-            "filename": "./logs/guess_picrew_bot_info.log"
+            "filename": "./logs/discord_bot.log"
         }
     },
     "root": {
