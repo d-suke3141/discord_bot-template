@@ -10,4 +10,6 @@ services:
         volumes:
           - ./src:/root/src
           - ./logs:/root/logs
+        env_file:
+          - .env
         entrypoint: python ./src/main.py
