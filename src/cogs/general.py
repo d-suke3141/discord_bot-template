@@ -1,7 +1,9 @@
 import discord
+import logging
 from discord.commands import slash_command
 from discord.ext.commands import Cog
 
+logger = logging.getLogger(__name__)
 
 class General(Cog, name='general'):
     def __init__(self, bot: discord.Bot):

@@ -1,7 +1,9 @@
 import discord
+import logging
 from discord.commands import slash_command
 from discord.ext.commands import Cog
 
+logger = logging.getLogger(__name__)
 
 class Template(Cog, name='template'):
     group = discord.SlashCommandGroup('group', 'Here are the commands related to group.')

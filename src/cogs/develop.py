@@ -1,8 +1,9 @@
 import discord
+import logging
 from discord.commands import SlashCommandGroup
 from discord.ext.commands import Cog
 
-
+logger = logging.getLogger(__name__)
 class Develop(Cog, name='develop'):
     group = SlashCommandGroup('develop', 'Here are the commands related to develop.')
 
@@ -40,7 +41,7 @@ class Develop(Cog, name='develop'):
         Cogのリストを表示する
         """
         cog_list = [cog for cog in self.bot.cogs.keys()]
-        print(cog_list)
+        logger.info(cog_list)
         await ctx.respond(f'{cog_list}')
 
 
