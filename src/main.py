@@ -2,6 +2,7 @@ import json
 import logging.config
 import os
 
+import yaml
 from discord.ext import commands
 from dotenv import load_dotenv
 
@@ -10,8 +11,8 @@ load_dotenv()
 bot_token = os.environ.get("BOT_TOKEN")
 guild_ids = os.environ.get("GUILD_IDS").split(',')
 
-with open('./src/log_config.json', 'r') as f:
-    log_conf = json.load(f)
+with open('./src/log_config.yml', 'r') as f:
+    log_conf = yaml.safe_load(f.read())
 
 logging.config.dictConfig(log_conf)
 logger = logging.getLogger(__name__)
